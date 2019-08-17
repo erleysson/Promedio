@@ -14,8 +14,7 @@ public class Main {
 
     public static void main (String[] args) {
 
-
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat decimalFormat = new DecimalFormat("##.#");
     Promedios promedios = new Promedios();
 
 
@@ -36,7 +35,7 @@ public class Main {
 
     JOptionPane.showMessageDialog(null,
             MENSAJE_NOTA1.getMensajes() + nota1 + MENSAJE_NOTA2.getMensajes() + nota2 + MENSAJE_NOTA3.getMensajes()
-                    + nota3 + MENSAJE_NOTA_DEFINITIVA.getMensajes() + df.format(promedios.calcularPromedio())+ promedios.mensajePromedio());
+                    + nota3 + MENSAJE_NOTA_DEFINITIVA.getMensajes() +  decimalFormat.format (promedios.calcularPromedio())+ promedios.mensajePromedio());
     }
 
 
